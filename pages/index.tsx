@@ -17,6 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 const Blog: React.FC<Props> = (props) => {
+  
   return (
     <Layout>
       <div className="page">

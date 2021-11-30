@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { feed } };
 };
 
-const Blog: React.FC<props> = (props) => {
+const Blog = (props) => {
   
   return (
     <Layout>

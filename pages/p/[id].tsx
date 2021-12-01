@@ -24,14 +24,14 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 
 async function publishPost(id: number): Promise<void> {
-  await fetch(`http://localhost:3000/api/publish/${id}`, {
+  await fetch(` http://emanuel-ameh-blogr-nextjs-prisma.vercel.app/publish/${id}`, {
     method: 'PUT',
   });
   await Router.push('/');
 }
 
 async function deletePost(id: number): Promise<void> {
-  await fetch(`http://localhost:3000/api/post/${id}`, {
+  await fetch(` http://emanuel-ameh-blogr-nextjs-prisma.vercel.app/api/post/${id}`, {
     method: 'DELETE',
   });
   Router.push('/');
@@ -48,7 +48,6 @@ const Post: React.FC<PostProps> = (props) => {
   if (!props.published) {
     title = `${title} (Draft)`;
   }
-  console.log(props)
 
   return (
     <Layout>

@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
 };
 
 async function publishPost(id: number): Promise<void> {
-  await fetch(` http://emanuel-ameh-blogr-nextjs-prisma.vercel.app/publish/${id}`, {
+  await fetch(` http://emanuel-ameh-blogr-nextjs-prisma.vercel.app//publish/${id}`, {
     method: 'PUT',
   });
   await Router.push('/');
